@@ -1,0 +1,15 @@
+<h1>Categorías disponibles</h1>
+
+{{#each categories}}
+
+<div>
+    <h2>{{name}}</h2>
+
+    <a href="/categories/{{_id}}">
+        <button>Ver productos</button>
+    </a>
+</div>
+
+<hr>
+
+{{/each}}

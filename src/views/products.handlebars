@@ -1,0 +1,23 @@
+<h1>Productos disponibles</h1>
+
+{{#each products}}
+
+<h2>{{title}}</h2>
+
+<p>Precio: ${{price}}</p>
+
+<p>Stock: {{stock}}</p>
+
+<p>Categoría: {{category.name}}</p>
+
+<p>Vendedor: {{seller.name}}</p>
+
+<button class="add-to-cart" data-id="{{_id}}">
+    Agregar al carrito
+</button>
+
+<hr>
+
+{{/each}}
+
+<script src="/js/cart.js"></script>
