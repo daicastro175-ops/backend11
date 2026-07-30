@@ -1,0 +1,289 @@
+[
+  {
+  "_id": "6a5ab504e3e585091f49b3eb",
+  "title": "Mesa de comedor",
+  "description": "Mesa de madera para seis personas.",
+  "code": "HOG001",
+  "price": 180000,
+  "status": true,
+  "stock": 8,
+  "category": "6a58d92c733465ac8d6bc125",
+  "thumbnails": [
+    "mesa1.jpg",
+    "mesa2.jpg"
+  ],
+  "seller": "6a5947d51b6956993e5418f6"
+},
+{
+  "_id": "6a5ab504e3e585091f49b3ec",
+  "title": "Sofá de tres cuerpos",
+  "description": "Sofá tapizado en tela gris con estructura reforzada.",
+  "code": "HOG002",
+  "price": 420000,
+  "status": true,
+  "stock": 5,
+  "category": "6a58d92c733465ac8d6bc125",
+  "thumbnails": [
+    "sofa1.jpg",
+    "sofa2.jpg"
+  ],
+  "seller": "6a5947d51b6956993e5418f6"
+},
+{
+  "_id": "6a5ab504e3e585091f49b3ed",
+  "title": "Lámpara de pie LED",
+  "description": "Lámpara moderna con luz cálida regulable.",
+  "code": "HOG003",
+  "price": 58000,
+  "status": true,
+  "stock": 20,
+  "category": "6a58d92c733465ac8d6bc125",
+  "thumbnails": [
+    "lampara1.jpg",
+    "lampara2.jpg"
+  ],
+  "seller": "6a5947d51b6956993e5418f6"
+},
+{
+  "_id": "6a5ab504e3e585091f49b3ee",
+  "title": "Biblioteca de melamina",
+  "description": "Biblioteca de cinco estantes color roble.",
+  "code": "HOG004",
+  "price": 135000,
+  "status": true,
+  "stock": 10,
+  "category": "6a58d92c733465ac8d6bc125",
+  "thumbnails": [
+    "biblioteca1.jpg",
+    "biblioteca2.jpg"
+  ],
+  "seller": "6a5947d51b6956993e5418f6"
+},
+{
+  "_id": "6a5ab504e3e585091f49b3ef",
+  "title": "Juego de sábanas Queen",
+  "description": "Juego de sábanas de algodón de 200 hilos.",
+  "code": "HOG005",
+  "price": 42000,
+  "status": true,
+  "stock": 30,
+  "category": "6a58d92c733465ac8d6bc125",
+  "thumbnails": [
+    "sabanas1.jpg",
+    "sabanas2.jpg"
+  ],
+  "seller": "6a5947d51b6956993e5418f6"
+},
+  {
+    "_id": "6a5ab484e3e585091f49b3e0",
+    "title": "Juego de sábanas matrimonial",
+    "description": "Sábanas de algodón 2 plazas color blanco",
+    "code": "SABA001",
+    "price": 45000,
+    "status": true,
+    "stock": 20,
+    "category": "6a58d92c733465ac8d6bc125",
+    "thumbnails": [
+      "sabanas1.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f8"
+  },
+  {
+    "_id": "6a5ab484e3e585091f49b3e1",
+    "title": "Mesa de comedor moderna",
+    "description": "Mesa de madera moderna para 6 personas",
+    "code": "MESA001",
+    "price": 320000,
+    "status": true,
+    "stock": 5,
+    "category": "6a58d92c733465ac8d6bc127",
+    "thumbnails": [
+      "mesa1.jpg",
+      "mesa2.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f9"
+  },
+  {
+    "_id": "6a5ab484e3e585091f49b3e2",
+    "title": "Remera oversize negra",
+    "description": "Remera de algodón estilo urbano unisex",
+    "code": "REME001",
+    "price": 18000,
+    "status": true,
+    "stock": 50,
+    "category": "6a58d92c733465ac8d6bc126",
+    "thumbnails": [
+      "remera1.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418fa"
+  },
+  {
+    "_id": "6a5ab484e3e585091f49b3e3",
+    "title": "Zapatillas deportivas blancas",
+    "description": "Zapatillas cómodas para uso diario y entrenamiento",
+    "code": "ZAPA001",
+    "price": 75000,
+    "status": true,
+    "stock": 15,
+    "category": "6a58d92c733465ac8d6bc126",
+    "thumbnails": [
+      "zapatillas1.jpg",
+      "zapatillas2.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f6"
+  },
+  {
+    "_id": "6a5ab484e3e585091f49b3e4",
+    "title": "Limpia pisos lavanda",
+    "description": "Producto de limpieza aromatizante para pisos",
+    "code": "LIMP001",
+    "price": 5000,
+    "status": true,
+    "stock": 100,
+    "category": "6a58d92c733465ac8d6bc128",
+    "thumbnails": [
+      "limpiador1.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f7"
+  },
+  {
+    "_id": "6a5ab504e3e585091f49b3e5",
+    "title": "Notebook Lenovo IdeaPad",
+    "description": "Notebook 15 pulgadas con 8GB RAM y 512GB SSD",
+    "code": "NOTE001",
+    "price": 850000,
+    "status": true,
+    "stock": 10,
+    "category": "6a58d92c733465ac8d6bc124",
+    "thumbnails": [
+      "notebook1.jpg",
+      "notebook2.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f6"
+  },
+  {
+    "_id": "6a5ab504e3e585091f49b3e6",
+    "title": "Auriculares Bluetooth Sony",
+    "description": "Auriculares inalámbricos con cancelación de ruido",
+    "code": "AURI001",
+    "price": 95000,
+    "status": true,
+    "stock": 25,
+    "category": "6a58d92c733465ac8d6bc124",
+    "thumbnails": [
+      "auriculares1.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f7"
+  },
+  {
+    "_id": "6a5ab504e3e585091f49b3e7",
+    "title": "Juego de sábanas matrimonial",
+    "description": "Sábanas de algodón 2 plazas color blanco",
+    "code": "SABA001",
+    "price": 45000,
+    "status": true,
+    "stock": 20,
+    "category": "6a58d92c733465ac8d6bc125",
+    "thumbnails": [
+      "sabanas1.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f8"
+  },
+  {
+    "_id": "6a5ab504e3e585091f49b3e8",
+    "title": "Mesa de comedor moderna",
+    "description": "Mesa de madera moderna para 6 personas",
+    "code": "MESA001",
+    "price": 320000,
+    "status": true,
+    "stock": 5,
+    "category": "6a58d92c733465ac8d6bc127",
+    "thumbnails": [
+      "mesa1.jpg",
+      "mesa2.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f9"
+  },
+  {
+    "_id": "6a5ab504e3e585091f49b3e9",
+    "title": "Remera oversize negra",
+    "description": "Remera de algodón estilo urbano unisex",
+    "code": "REME001",
+    "price": 18000,
+    "status": true,
+    "stock": 50,
+    "category": "6a58d92c733465ac8d6bc126",
+    "thumbnails": [
+      "remera1.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418fa"
+  },
+  {
+    "_id": "6a5ab504e3e585091f49b3ea",
+    "title": "Zapatillas deportivas blancas",
+    "description": "Zapatillas cómodas para uso diario y entrenamiento",
+    "code": "ZAPA001",
+    "price": 75000,
+    "status": true,
+    "stock": 15,
+    "category": "6a58d92c733465ac8d6bc126",
+    "thumbnails": [
+      "zapatillas1.jpg",
+      "zapatillas2.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f6"
+  },
+  {
+    "_id": "6a5ab504e3e585091f49b3eb",
+    "title": "Limpia pisos lavanda",
+    "description": "Producto de limpieza aromatizante para pisos",
+    "code": "LIMP001",
+    "price": 5000,
+    "status": true,
+    "stock": 100,
+    "category": "6a58d92c733465ac8d6bc128",
+    "thumbnails": [
+      "limpiador1.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f7"
+  },
+  {
+    "_id": "6a5f9171b58ed02e93f81711",
+    "title": "Notebook Lenovo",
+    "description": "Notebook 15 pulgadas",
+    "code": "NB001",
+    "price": 2222222222222221,
+    "status": true,
+    "stock": 666666,
+    "category": "687a9d8b5a7f0c1234567890",
+    "thumbnails": [
+      "https://imagen1.jpg",
+      "https://imagen2.jpg"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6a6473372b501606e6fe1bae",
+    "title": "Mouse Logitech",
+    "description": "Mouse inalámbrico gamer",
+    "code": "MOUSE123",
+    "price": 30000,
+    "status": true,
+    "stock": 20,
+    "category": "6a58d92c733465ac8d6bc124",
+    "thumbnails": [],
+    "__v": 0
+  },
+  {
+    "_id": "6a67d2fc4ecbaae0020ce7d6",
+    "title": "Auriculares",
+    "description": "Bluetooth",
+    "code": "ABC123",
+    "price": 25000,
+    "status": true,
+    "stock": 8,
+    "category": "6a58d92c733465ac8d6bc124",
+    "thumbnails": [],
+    "__v": 0
+  }
+]

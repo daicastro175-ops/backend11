@@ -1,6 +1,18 @@
 import Product from "../models/product.model.js";
 import productUtils from "../utils/product.utils.js";
+import { getIO } from "../utils/socket.js";
+import exportDAO from "../dao/fs/export.dao.js";
 
+const getProductsWithPopulate = async () => {
+  return await Product.find()
+    .populate("category")
+    .populate("seller")
+    .lean();
+};
+const syncFileSystem = async () => {
+  const products = await Product.find().lean();
+  await exportDAO.saveProducts(products);
+};
 
 
 const createProduct = async (req, res) => {
@@ -27,10 +39,17 @@ const createProduct = async (req, res) => {
       thumbnails
     });
 
+await syncFileSystem();
+    const products = await getProductsWithPopulate();
+
+    getIO().emit("productsUpdated", products);
+
+
     res.status(201).json({
       success: true,
       payload: product
     });
+
 
   } catch (error) {
     res.status(500).json({
@@ -49,6 +68,7 @@ const getAllProducts = async (req, res) => {
 
     const sort = productUtils.getSort(req.query.sort);
 
+
     const result = await Product.paginate(filter, {
       page,
       limit,
@@ -56,7 +76,9 @@ const getAllProducts = async (req, res) => {
       populate: ["category", "seller"]
     });
 
+
     const links = productUtils.buildLinks(result, limit);
+
 
     res.status(200).json({
       status: "success",
@@ -71,6 +93,7 @@ const getAllProducts = async (req, res) => {
       nextLink: links.nextLink
     });
 
+
   } catch (error) {
     res.status(500).json({
       status: "error",
@@ -79,13 +102,16 @@ const getAllProducts = async (req, res) => {
   }
 };
 
+
 const getProductById = async (req, res) => {
   try {
-    const { id } = req.params;
+    const { pid } = req.params;
 
-    const product = await Product.findById(id)
+
+    const product = await Product.findById(pid)
       .populate("category")
       .populate("seller");
+
 
     if (!product) {
       return res.status(404).json({
@@ -94,10 +120,12 @@ const getProductById = async (req, res) => {
       });
     }
 
+
     res.status(200).json({
       success: true,
       payload: product
     });
+
 
   } catch (error) {
     res.status(500).json({
@@ -107,9 +135,11 @@ const getProductById = async (req, res) => {
   }
 };
 
+
 const updateProduct = async (req, res) => {
   try {
     const { pid } = req.params;
+
 
     const updatedProduct = await Product.findByIdAndUpdate(
       pid,
@@ -120,17 +150,26 @@ const updateProduct = async (req, res) => {
       }
     );
 
+
     if (!updatedProduct) {
       return res.status(404).json({
         success: false,
         error: "Producto no encontrado"
       });
     }
+    
+    await syncFileSystem();
+
+    const products = await getProductsWithPopulate();
+
+    getIO().emit("productsUpdated", products);
+
 
     res.status(200).json({
       success: true,
       payload: updatedProduct
     });
+
 
   } catch (error) {
     res.status(500).json({
@@ -140,11 +179,14 @@ const updateProduct = async (req, res) => {
   }
 };
 
+
 const deleteProduct = async (req, res) => {
   try {
     const { pid } = req.params;
 
+
     const deletedProduct = await Product.findByIdAndDelete(pid);
+
 
     if (!deletedProduct) {
       return res.status(404).json({
@@ -152,11 +194,18 @@ const deleteProduct = async (req, res) => {
         error: "Producto no encontrado"
       });
     }
+await syncFileSystem();
+
+    const products = await getProductsWithPopulate();
+
+    getIO().emit("productsUpdated", products);
+
 
     res.status(200).json({
       success: true,
       message: "Producto eliminado correctamente"
     });
+
 
   } catch (error) {
     res.status(500).json({
@@ -166,7 +215,11 @@ const deleteProduct = async (req, res) => {
   }
 };
 
-export default {
-    getAllProducts, createProduct, getProductById, updateProduct, deleteProduct
 
+export default {
+  getAllProducts,
+  createProduct,
+  getProductById,
+  updateProduct,
+  deleteProduct
 };

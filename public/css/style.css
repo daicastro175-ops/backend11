@@ -27,7 +27,7 @@ h1 {
     width: 250px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
 }
 
 .card h2 {
@@ -35,5 +35,26 @@ h1 {
 }
 
 .card p {
-    margin: 5px 0;
+    margin: 8px 0;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #0077ff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav button {
+    margin-right: 10px;
 }

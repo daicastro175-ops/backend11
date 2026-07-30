@@ -1,23 +1,30 @@
 <h1>Productos disponibles</h1>
 
+<div id="products-container">
+
 {{#each products}}
 
-<h2>{{title}}</h2>
+<div>
+    <h2>{{title}}</h2>
 
-<p>Precio: ${{price}}</p>
+    <p>Precio: ${{price}}</p>
 
-<p>Stock: {{stock}}</p>
+    <p>Stock: {{stock}}</p>
 
-<p>Categoría: {{category.name}}</p>
+    <p>Categoría: {{category.name}}</p>
 
-<p>Vendedor: {{seller.name}}</p>
+    <p>Vendedor: {{seller.name}}</p>
 
-<button class="add-to-cart" data-id="{{_id}}">
-    Agregar al carrito
-</button>
+    <button class="add-to-cart" data-id="{{_id}}">
+        Agregar al carrito
+    </button>
 
-<hr>
+    <hr>
+</div>
 
 {{/each}}
+
+</div>
+
 
 <script src="/js/cart.js"></script>

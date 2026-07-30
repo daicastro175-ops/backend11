@@ -7,14 +7,30 @@ import categoryRouter from "./src/routes/category.routes.js";
 import sellerRouter from "./src/routes/seller.routes.js";
 import viewsRouter from "./src/routes/views.routes.js";
 import cartRouter from "./src/routes/cart.routes.js";
+import { createServer } from "http";
+import { Server } from "socket.io";
+import { initSocket } from "./src/utils/socket.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 
+const httpServer = createServer(app);
+
+const io = new Server(httpServer);
+
+initSocket(io);
+
+io.on("connection", (socket) => {
+    console.log("Cliente conectado:", socket.id);
+});
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 
 // Handlebars
@@ -35,6 +51,6 @@ app.use("/", viewsRouter);
 
 connectDB();
 
-app.listen(envs.port, () => {
+httpServer.listen(envs.port, () => {
     console.log(`Servidor escuchando en el puerto ${envs.port}`);
 });
