@@ -6,6 +6,7 @@ socket.on("connect", () => {
     console.log("Conectado al servidor:", socket.id);
 });
 
+
 socket.on("productsUpdated", (products) => {
 
     console.log("Productos actualizados:", products);
@@ -18,6 +19,7 @@ socket.on("productsUpdated", (products) => {
 
         container.innerHTML += `
             <div class="card">
+
                 <h2>${product.title}</h2>
 
                 <p>Precio: $${product.price}</p>
@@ -38,13 +40,18 @@ socket.on("productsUpdated", (products) => {
     });
 
 });
+
+
 const CART_ID = "6a5f9acd7d99b675951f85af";
+
 
 document.addEventListener("click", async (e) => {
 
     if (!e.target.classList.contains("add-to-cart")) return;
 
+
     const productId = e.target.dataset.id;
+
 
     try {
 
@@ -55,29 +62,38 @@ document.addEventListener("click", async (e) => {
             }
         );
 
+
         const data = await response.json();
 
+
         if (data.success) {
+
             Swal.fire({
                 icon: "success",
                 title: "Producto agregado al carrito",
                 timer: 1500,
                 showConfirmButton: false
             });
+
         } else {
+
             Swal.fire({
                 icon: "error",
                 title: data.error
             });
+
         }
 
+
     } catch (error) {
+
         console.error(error);
 
         Swal.fire({
             icon: "error",
             title: "Ocurrió un error"
         });
+
     }
 
 });

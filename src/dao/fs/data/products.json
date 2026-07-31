@@ -1,87 +1,12 @@
 [
   {
-  "_id": "6a5ab504e3e585091f49b3eb",
-  "title": "Mesa de comedor",
-  "description": "Mesa de madera para seis personas.",
-  "code": "HOG001",
-  "price": 180000,
-  "status": true,
-  "stock": 8,
-  "category": "6a58d92c733465ac8d6bc125",
-  "thumbnails": [
-    "mesa1.jpg",
-    "mesa2.jpg"
-  ],
-  "seller": "6a5947d51b6956993e5418f6"
-},
-{
-  "_id": "6a5ab504e3e585091f49b3ec",
-  "title": "Sofá de tres cuerpos",
-  "description": "Sofá tapizado en tela gris con estructura reforzada.",
-  "code": "HOG002",
-  "price": 420000,
-  "status": true,
-  "stock": 5,
-  "category": "6a58d92c733465ac8d6bc125",
-  "thumbnails": [
-    "sofa1.jpg",
-    "sofa2.jpg"
-  ],
-  "seller": "6a5947d51b6956993e5418f6"
-},
-{
-  "_id": "6a5ab504e3e585091f49b3ed",
-  "title": "Lámpara de pie LED",
-  "description": "Lámpara moderna con luz cálida regulable.",
-  "code": "HOG003",
-  "price": 58000,
-  "status": true,
-  "stock": 20,
-  "category": "6a58d92c733465ac8d6bc125",
-  "thumbnails": [
-    "lampara1.jpg",
-    "lampara2.jpg"
-  ],
-  "seller": "6a5947d51b6956993e5418f6"
-},
-{
-  "_id": "6a5ab504e3e585091f49b3ee",
-  "title": "Biblioteca de melamina",
-  "description": "Biblioteca de cinco estantes color roble.",
-  "code": "HOG004",
-  "price": 135000,
-  "status": true,
-  "stock": 10,
-  "category": "6a58d92c733465ac8d6bc125",
-  "thumbnails": [
-    "biblioteca1.jpg",
-    "biblioteca2.jpg"
-  ],
-  "seller": "6a5947d51b6956993e5418f6"
-},
-{
-  "_id": "6a5ab504e3e585091f49b3ef",
-  "title": "Juego de sábanas Queen",
-  "description": "Juego de sábanas de algodón de 200 hilos.",
-  "code": "HOG005",
-  "price": 42000,
-  "status": true,
-  "stock": 30,
-  "category": "6a58d92c733465ac8d6bc125",
-  "thumbnails": [
-    "sabanas1.jpg",
-    "sabanas2.jpg"
-  ],
-  "seller": "6a5947d51b6956993e5418f6"
-},
-  {
     "_id": "6a5ab484e3e585091f49b3e0",
     "title": "Juego de sábanas matrimonial",
     "description": "Sábanas de algodón 2 plazas color blanco",
     "code": "SABA001",
-    "price": 45000,
+    "price": 920000,
     "status": true,
-    "stock": 20,
+    "stock": 158,
     "category": "6a58d92c733465ac8d6bc125",
     "thumbnails": [
       "sabanas1.jpg"
@@ -176,20 +101,6 @@
     "seller": "6a5947d51b6956993e5418f7"
   },
   {
-    "_id": "6a5ab504e3e585091f49b3e7",
-    "title": "Juego de sábanas matrimonial",
-    "description": "Sábanas de algodón 2 plazas color blanco",
-    "code": "SABA001",
-    "price": 45000,
-    "status": true,
-    "stock": 20,
-    "category": "6a58d92c733465ac8d6bc125",
-    "thumbnails": [
-      "sabanas1.jpg"
-    ],
-    "seller": "6a5947d51b6956993e5418f8"
-  },
-  {
     "_id": "6a5ab504e3e585091f49b3e8",
     "title": "Mesa de comedor moderna",
     "description": "Mesa de madera moderna para 6 personas",
@@ -205,76 +116,6 @@
     "seller": "6a5947d51b6956993e5418f9"
   },
   {
-    "_id": "6a5ab504e3e585091f49b3e9",
-    "title": "Remera oversize negra",
-    "description": "Remera de algodón estilo urbano unisex",
-    "code": "REME001",
-    "price": 18000,
-    "status": true,
-    "stock": 50,
-    "category": "6a58d92c733465ac8d6bc126",
-    "thumbnails": [
-      "remera1.jpg"
-    ],
-    "seller": "6a5947d51b6956993e5418fa"
-  },
-  {
-    "_id": "6a5ab504e3e585091f49b3ea",
-    "title": "Zapatillas deportivas blancas",
-    "description": "Zapatillas cómodas para uso diario y entrenamiento",
-    "code": "ZAPA001",
-    "price": 75000,
-    "status": true,
-    "stock": 15,
-    "category": "6a58d92c733465ac8d6bc126",
-    "thumbnails": [
-      "zapatillas1.jpg",
-      "zapatillas2.jpg"
-    ],
-    "seller": "6a5947d51b6956993e5418f6"
-  },
-  {
-    "_id": "6a5ab504e3e585091f49b3eb",
-    "title": "Limpia pisos lavanda",
-    "description": "Producto de limpieza aromatizante para pisos",
-    "code": "LIMP001",
-    "price": 5000,
-    "status": true,
-    "stock": 100,
-    "category": "6a58d92c733465ac8d6bc128",
-    "thumbnails": [
-      "limpiador1.jpg"
-    ],
-    "seller": "6a5947d51b6956993e5418f7"
-  },
-  {
-    "_id": "6a5f9171b58ed02e93f81711",
-    "title": "Notebook Lenovo",
-    "description": "Notebook 15 pulgadas",
-    "code": "NB001",
-    "price": 2222222222222221,
-    "status": true,
-    "stock": 666666,
-    "category": "687a9d8b5a7f0c1234567890",
-    "thumbnails": [
-      "https://imagen1.jpg",
-      "https://imagen2.jpg"
-    ],
-    "__v": 0
-  },
-  {
-    "_id": "6a6473372b501606e6fe1bae",
-    "title": "Mouse Logitech",
-    "description": "Mouse inalámbrico gamer",
-    "code": "MOUSE123",
-    "price": 30000,
-    "status": true,
-    "stock": 20,
-    "category": "6a58d92c733465ac8d6bc124",
-    "thumbnails": [],
-    "__v": 0
-  },
-  {
     "_id": "6a67d2fc4ecbaae0020ce7d6",
     "title": "Auriculares",
     "description": "Bluetooth",
@@ -284,6 +125,218 @@
     "stock": 8,
     "category": "6a58d92c733465ac8d6bc124",
     "thumbnails": [],
+    "__v": 0
+  },
+  {
+    "_id": "6a6bdb77d1273e5a095b7bf5",
+    "title": "Mesa de comedor",
+    "description": "Mesa de madera para seis personas.",
+    "code": "HOG001",
+    "price": 180000,
+    "status": true,
+    "stock": 8,
+    "category": {
+      "$oid": "6a58d92c733465ac8d6bc125"
+    },
+    "thumbnails": [
+      "mesa1.jpg",
+      "mesa2.jpg"
+    ],
+    "seller": {
+      "$oid": "6a5947d51b6956993e5418f6"
+    }
+  },
+  {
+    "_id": "6a6bdb77d1273e5a095b7bf6",
+    "title": "Sofá de tres cuerpos",
+    "description": "Sofá tapizado en tela gris con estructura reforzada.",
+    "code": "HOG002",
+    "price": 420000,
+    "status": true,
+    "stock": 5,
+    "category": {
+      "$oid": "6a58d92c733465ac8d6bc125"
+    },
+    "thumbnails": [
+      "sofa1.jpg",
+      "sofa2.jpg"
+    ],
+    "seller": {
+      "$oid": "6a5947d51b6956993e5418f6"
+    }
+  },
+  {
+    "_id": "6a6bdb77d1273e5a095b7bf7",
+    "title": "Lámpara de pie LED",
+    "description": "Lámpara moderna con luz cálida regulable.",
+    "code": "HOG003",
+    "price": 58000,
+    "status": true,
+    "stock": 20,
+    "category": {
+      "$oid": "6a58d92c733465ac8d6bc125"
+    },
+    "thumbnails": [
+      "lampara1.jpg",
+      "lampara2.jpg"
+    ],
+    "seller": {
+      "$oid": "6a5947d51b6956993e5418f6"
+    }
+  },
+  {
+    "_id": "6a6bdb77d1273e5a095b7bf8",
+    "title": "Biblioteca de melamina",
+    "description": "Biblioteca de cinco estantes color roble.",
+    "code": "HOG004",
+    "price": 135000,
+    "status": true,
+    "stock": 10,
+    "category": {
+      "$oid": "6a58d92c733465ac8d6bc125"
+    },
+    "thumbnails": [
+      "biblioteca1.jpg",
+      "biblioteca2.jpg"
+    ],
+    "seller": {
+      "$oid": "6a5947d51b6956993e5418f6"
+    }
+  },
+  {
+    "_id": "6a6bdb77d1273e5a095b7bf9",
+    "title": "Juego de sábanas Queen",
+    "description": "Juego de sábanas de algodón de 200 hilos.",
+    "code": "HOG005",
+    "price": 42000,
+    "status": true,
+    "stock": 30,
+    "category": {
+      "$oid": "6a58d92c733465ac8d6bc125"
+    },
+    "thumbnails": [
+      "sabanas1.jpg",
+      "sabanas2.jpg"
+    ],
+    "seller": {
+      "$oid": "6a5947d51b6956993e5418f6"
+    }
+  },
+  {
+    "_id": "6a6bdc14a7fe4d91aee10d3d",
+    "title": "Remera básica blanca",
+    "description": "Remera de algodón de manga corta para uso diario.",
+    "code": "ROP001",
+    "price": 25000,
+    "status": true,
+    "stock": 40,
+    "category": "6a58d92c733465ac8d6bc126",
+    "thumbnails": [
+      "remera1.jpg",
+      "remera2.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f6"
+  },
+  {
+    "_id": "6a6bdc14a7fe4d91aee10d3e",
+    "title": "Jean slim fit",
+    "description": "Jean de corte slim confeccionado en denim elastizado.",
+    "code": "ROP002",
+    "price": 68000,
+    "status": true,
+    "stock": 20,
+    "category": "6a58d92c733465ac8d6bc126",
+    "thumbnails": [
+      "jean1.jpg",
+      "jean2.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f6"
+  },
+  {
+    "_id": "6a6bdc14a7fe4d91aee10d3f",
+    "title": "Campera impermeable",
+    "description": "Campera liviana resistente al agua con capucha.",
+    "code": "ROP003",
+    "price": 98000,
+    "status": true,
+    "stock": 12,
+    "category": "6a58d92c733465ac8d6bc126",
+    "thumbnails": [
+      "campera1.jpg",
+      "campera2.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f6"
+  },
+  {
+    "_id": "6a6bdc14a7fe4d91aee10d40",
+    "title": "Buzo con capucha",
+    "description": "Buzo de algodón frizado con bolsillo delantero.",
+    "code": "ROP004",
+    "price": 55000,
+    "status": true,
+    "stock": 18,
+    "category": "6a58d92c733465ac8d6bc126",
+    "thumbnails": [
+      "buzo1.jpg",
+      "buzo2.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f6"
+  },
+  {
+    "_id": "6a6bdc14a7fe4d91aee10d41",
+    "title": "Vestido casual",
+    "description": "Vestido de tela liviana ideal para primavera y verano.",
+    "code": "ROP005",
+    "price": 72000,
+    "status": true,
+    "stock": 10,
+    "category": "6a58d92c733465ac8d6bc126",
+    "thumbnails": [
+      "vestido1.jpg",
+      "vestido2.jpg"
+    ],
+    "seller": "6a5947d51b6956993e5418f6"
+  },
+  {
+    "_id": "6a6bef94e9c557e0dd56118a",
+    "title": "Remera fucsia",
+    "description": "Remera de algodón premium corte oversize.",
+    "code": "ROP001",
+    "price": 25000,
+    "status": true,
+    "stock": 20,
+    "category": "6a58d92c733465ac8d6bc126",
+    "thumbnails": [
+      "https://imagen.com/remera-negra.jpg"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6a6c0f32dd070be9f6dff883",
+    "title": "Juego de toallas de baño",
+    "description": "Set de toallas de algodón premium compuesto por toalla de baño, toalla de mano y toalla facial color gris",
+    "code": "TOA001",
+    "price": 38000,
+    "status": true,
+    "stock": 25,
+    "category": "6a58d92c733465ac8d6bc125",
+    "thumbnails": [
+      "https://example.com/juego-toallas-gris.jpg"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6a6c1123c3c0867a1b5d0cf3",
+    "title": "Juego de almohadones",
+    "description": "Set de almohadones de algodón premium color gris",
+    "code": "TOA001",
+    "price": 38000,
+    "status": true,
+    "stock": 25,
+    "category": "6a58d92c733465ac8d6bc125",
+    "thumbnails": [
+      "https://example.com/juego-almohadones-gris.jpg"
+    ],
     "__v": 0
   }
 ]

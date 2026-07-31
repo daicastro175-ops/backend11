@@ -1,5 +1,7 @@
 import Cart from "../models/cart.model.js";
 import Product from "../models/product.model.js";
+import { getIO } from "../utils/socket.js";
+
 
 const createCart = async (req, res) => {
   try {
@@ -19,6 +21,7 @@ const createCart = async (req, res) => {
     });
   }
 };
+
 
 
 const getCartById = async (req, res) => {
@@ -46,6 +49,8 @@ const getCartById = async (req, res) => {
     });
   }
 };
+
+
 
 const addProductToCart = async (req, res) => {
   try {
@@ -84,6 +89,15 @@ const addProductToCart = async (req, res) => {
 
     await cart.save();
 
+
+    const io = getIO();
+
+    io.emit(
+      "cartUpdated",
+      cid
+    );
+
+
     res.status(200).json({
       success: true,
       payload: cart
@@ -96,6 +110,8 @@ const addProductToCart = async (req, res) => {
     });
   }
 };
+
+
 
 const deleteProductFromCart = async (req, res) => {
   try {
@@ -125,6 +141,15 @@ const deleteProductFromCart = async (req, res) => {
 
     await cart.save();
 
+
+    const io = getIO();
+
+    io.emit(
+      "cartUpdated",
+      cid
+    );
+
+
     res.status(200).json({
       success: true,
       message: "Producto eliminado del carrito",
@@ -138,6 +163,8 @@ const deleteProductFromCart = async (req, res) => {
     });
   }
 };
+
+
 
 const updateCart = async (req, res) => {
   try {
@@ -158,6 +185,15 @@ const updateCart = async (req, res) => {
 
     await cart.save();
 
+
+    const io = getIO();
+
+    io.emit(
+      "cartUpdated",
+      cid
+    );
+
+
     res.status(200).json({
       success: true,
       message: "Carrito actualizado correctamente",
@@ -171,6 +207,8 @@ const updateCart = async (req, res) => {
     });
   }
 };
+
+
 
 const updateProductQuantity = async (req, res) => {
   try {
@@ -201,6 +239,15 @@ const updateProductQuantity = async (req, res) => {
 
     await cart.save();
 
+
+    const io = getIO();
+
+    io.emit(
+      "cartUpdated",
+      cid
+    );
+
+
     res.status(200).json({
       success: true,
       message: "Cantidad actualizada correctamente",
@@ -215,6 +262,8 @@ const updateProductQuantity = async (req, res) => {
   }
 };
 
+
+
 const clearCart = async (req, res) => {
   try {
     const { cid } = req.params;
@@ -228,15 +277,26 @@ const clearCart = async (req, res) => {
       });
     }
 
+
     cart.products = [];
 
     await cart.save();
+
+
+    const io = getIO();
+
+    io.emit(
+      "cartUpdated",
+      cid
+    );
+
 
     res.status(200).json({
       success: true,
       message: "Carrito vaciado correctamente",
       payload: cart
     });
+
 
   } catch (error) {
     res.status(500).json({
@@ -246,7 +306,14 @@ const clearCart = async (req, res) => {
   }
 };
 
+
+
 export default {
-  createCart, updateCart, updateProductQuantity,
-  getCartById, addProductToCart, deleteProductFromCart, clearCart
+  createCart,
+  updateCart,
+  updateProductQuantity,
+  getCartById,
+  addProductToCart,
+  deleteProductFromCart,
+  clearCart
 };

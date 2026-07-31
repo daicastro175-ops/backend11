@@ -3,16 +3,20 @@ import productUtils from "../utils/product.utils.js";
 import { getIO } from "../utils/socket.js";
 import exportDAO from "../dao/fs/export.dao.js";
 
+
 const getProductsWithPopulate = async () => {
   return await Product.find()
     .populate("category")
     .populate("seller")
     .lean();
 };
+
+
 const syncFileSystem = async () => {
   const products = await Product.find().lean();
   await exportDAO.saveProducts(products);
 };
+
 
 
 const createProduct = async (req, res) => {
@@ -28,6 +32,7 @@ const createProduct = async (req, res) => {
       thumbnails
     } = req.body;
 
+
     const product = await Product.create({
       title,
       description,
@@ -39,10 +44,13 @@ const createProduct = async (req, res) => {
       thumbnails
     });
 
-await syncFileSystem();
+
+    await syncFileSystem();
+
     const products = await getProductsWithPopulate();
 
     getIO().emit("productsUpdated", products);
+
 
 
     res.status(201).json({
@@ -60,6 +68,9 @@ await syncFileSystem();
 };
 
 
+
+
+
 const getAllProducts = async (req, res) => {
   try {
     const { page, limit } = productUtils.getPagination(req.query);
@@ -67,6 +78,7 @@ const getAllProducts = async (req, res) => {
     const filter = productUtils.getFilter(req.query.query);
 
     const sort = productUtils.getSort(req.query.sort);
+
 
 
     const result = await Product.paginate(filter, {
@@ -77,7 +89,9 @@ const getAllProducts = async (req, res) => {
     });
 
 
+
     const links = productUtils.buildLinks(result, limit);
+
 
 
     res.status(200).json({
@@ -94,6 +108,7 @@ const getAllProducts = async (req, res) => {
     });
 
 
+
   } catch (error) {
     res.status(500).json({
       status: "error",
@@ -103,14 +118,19 @@ const getAllProducts = async (req, res) => {
 };
 
 
+
+
+
 const getProductById = async (req, res) => {
   try {
     const { pid } = req.params;
 
 
+
     const product = await Product.findById(pid)
       .populate("category")
       .populate("seller");
+
 
 
     if (!product) {
@@ -121,10 +141,12 @@ const getProductById = async (req, res) => {
     }
 
 
+
     res.status(200).json({
       success: true,
       payload: product
     });
+
 
 
   } catch (error) {
@@ -136,9 +158,13 @@ const getProductById = async (req, res) => {
 };
 
 
+
+
+
 const updateProduct = async (req, res) => {
   try {
     const { pid } = req.params;
+
 
 
     const updatedProduct = await Product.findByIdAndUpdate(
@@ -151,18 +177,22 @@ const updateProduct = async (req, res) => {
     );
 
 
+
     if (!updatedProduct) {
       return res.status(404).json({
         success: false,
         error: "Producto no encontrado"
       });
     }
-    
+
+
+
     await syncFileSystem();
 
     const products = await getProductsWithPopulate();
 
     getIO().emit("productsUpdated", products);
+
 
 
     res.status(200).json({
@@ -171,6 +201,7 @@ const updateProduct = async (req, res) => {
     });
 
 
+
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -180,12 +211,17 @@ const updateProduct = async (req, res) => {
 };
 
 
+
+
+
 const deleteProduct = async (req, res) => {
   try {
     const { pid } = req.params;
 
 
+
     const deletedProduct = await Product.findByIdAndDelete(pid);
+
 
 
     if (!deletedProduct) {
@@ -194,17 +230,22 @@ const deleteProduct = async (req, res) => {
         error: "Producto no encontrado"
       });
     }
-await syncFileSystem();
+
+
+
+    await syncFileSystem();
 
     const products = await getProductsWithPopulate();
 
     getIO().emit("productsUpdated", products);
 
 
+
     res.status(200).json({
       success: true,
       message: "Producto eliminado correctamente"
     });
+
 
 
   } catch (error) {
@@ -214,6 +255,9 @@ await syncFileSystem();
     });
   }
 };
+
+
+
 
 
 export default {

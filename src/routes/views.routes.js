@@ -33,10 +33,11 @@ router.get("/categories/:cid", async (req, res) => {
         }
 
         const products = await Product.find({
-            category: cid
-        })
-        .populate("seller")
-        .lean();
+    category: cid
+})
+.populate("seller")
+.populate("category")
+.lean();
 
         res.render("products", {
             category,
@@ -61,11 +62,33 @@ router.get("/carts/:cid", async (req, res) => {
         }
 
         res.render("cart", {
-            products: cart.products
-        });
+    products: cart.products,
+    cartId: cid
+        })
 
     } catch (error) {
         res.status(500).send(error.message);
+    }
+});
+
+router.get("/realtimeproducts", async (req, res) => {
+    try {
+
+        const products = await Product.find()
+            .populate("category")
+            .populate("seller")
+            .lean();
+
+
+        res.render("realTimeProducts", {
+            products
+        });
+
+
+    } catch(error) {
+
+        res.status(500).send(error.message);
+
     }
 });
 

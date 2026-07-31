@@ -8,6 +8,7 @@
 
 </head>
 <body>
+
 <nav>
     <a href="/">
         <button>Inicio</button>
@@ -16,16 +17,20 @@
     <a href="/carts/6a5f9acd7d99b675951f85af">
         <button>Ver carrito</button>
     </a>
+
+    <a href="/realtimeproducts">
+        <button>Productos en tiempo real</button>
+    </a>
 </nav>
 
 <hr>
 
-    {{{body}}}
-    
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.all.min.js"></script>
-    {{!-- Socket.io --}}
-    <script src="/socket.io/socket.io.js"></script>
-     {{!-- logica del chat --}}
-     <script src="/js/index.js"></script>
+{{{body}}}
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.all.min.js"></script>
+
+<script src="/socket.io/socket.io.js"></script>
+
 </body>
 </html>

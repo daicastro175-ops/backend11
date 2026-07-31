@@ -4,6 +4,10 @@
 
 <h1>Mi carrito</h1>
 
+
+<div id="cartContainer" data-cart="{{cartId}}">
+
+
 {{#if products.length}}
 
     {{#each products}}
@@ -18,8 +22,16 @@
 
     {{/each}}
 
+
 {{else}}
 
     <p>El carrito está vacío.</p>
 
+
 {{/if}}
+
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/cart.js"></script>
